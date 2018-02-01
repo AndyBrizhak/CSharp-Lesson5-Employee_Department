@@ -23,6 +23,12 @@ namespace Employee_Department
         public MainWindow()
         {
             InitializeComponent();
+            List<Department> Departments = new List<Department>(3);
+            Departments[0].Name = "Laundry";
+            Departments[1].Name = "Receiving room";
+            Departments[2].Name = "Morgue";
+
+
         }
     }
 }
