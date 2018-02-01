@@ -32,7 +32,7 @@ namespace Employee_Department
             List<Employee> emp_list = new List<Employee>();
             emp_list.Add(new Employee("Lozhkin", dep_list[0]));/* { Name = "Lozhkin", Dep = dep_list[0]  });*/
             emp_list.Add(new Employee("Pupkin", dep_list[1]));
-            emp_list.Add(new Employee("Ivanov", dep_list[1]));
+            emp_list.Add(new Employee("Ivanov", dep_list[2]));
 
 
 
