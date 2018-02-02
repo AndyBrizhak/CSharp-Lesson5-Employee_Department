@@ -8,8 +8,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <ComboBox x:Name="Department" HorizontalAlignment="Left" Margin="327,44,0,0" VerticalAlignment="Top" Width="156" StaysOpenOnEdit="True" />
-        <ComboBox x:Name="Employee" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Width="218" IsSynchronizedWithCurrentItem="False"/>
+        <ComboBox x:Name="Department" HorizontalAlignment="Left" Margin="327,44,0,0" VerticalAlignment="Top" Width="156" IsSynchronizedWithCurrentItem="False" IsDropDownOpen="True" IsEditable="True" />
+        <ComboBox x:Name="Employee" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Width="302" IsSynchronizedWithCurrentItem="False" />
         <Label Content="Employee" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="218"/>
         <Label Content="Departments" HorizontalAlignment="Left" Margin="327,18,0,0" VerticalAlignment="Top" Width="156"/>
 

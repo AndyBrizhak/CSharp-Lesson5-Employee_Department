@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:Employee_Department"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <ContextMenu x:Key="ContextMenuDepartment"/>
+
     </Application.Resources>
 </Application>
