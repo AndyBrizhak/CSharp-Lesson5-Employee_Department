@@ -1,12 +1,17 @@
-﻿<Window x:Class="Employee_Department.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Employee_Department"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Employee_Department.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <ComboBox x:Name="Department" HorizontalAlignment="Left" Margin="327,44,0,0" VerticalAlignment="Top" Width="156" StaysOpenOnEdit="True" />
+        <ComboBox x:Name="Employee" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Width="218" IsSynchronizedWithCurrentItem="False"/>
+        <Label Content="Employee" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="218"/>
+        <Label Content="Departments" HorizontalAlignment="Left" Margin="327,18,0,0" VerticalAlignment="Top" Width="156"/>
+
     </Grid>
 </Window>

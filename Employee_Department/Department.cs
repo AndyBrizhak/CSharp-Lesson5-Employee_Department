@@ -20,5 +20,9 @@ namespace Employee_Department
             Name = _name;
         }
 
+        public override string ToString()
+        {
+            return $"Department {this.Name}";
+        }
     }
 }

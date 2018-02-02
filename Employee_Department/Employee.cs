@@ -18,5 +18,10 @@ namespace Employee_Department
             Name = _emp_name;
             Dep = _emp_dep;
         }
+
+        //public override string ToString()
+        //{
+        //    return $"Emp {0} Dep {1} "; {this.Name};
+        //}
     }
 }
