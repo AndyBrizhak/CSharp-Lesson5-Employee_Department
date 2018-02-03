@@ -34,7 +34,7 @@ namespace Employee_Department
             InitializeComponent();
             //FillComboBox ();
 
-            dep_list.Add(new Department() { Name = "Laundry" });
+            dep_list.Add(new Department() { Name = "Laundry" });       //++
             dep_list.Add(new Department() { Name = "Receiving room" });
             dep_list.Add(new Department() { Name = "Morgue" });
 
