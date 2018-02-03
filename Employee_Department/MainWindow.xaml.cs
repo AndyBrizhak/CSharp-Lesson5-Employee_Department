@@ -20,10 +20,14 @@ namespace Employee_Department
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Department _selectedDep;
+        
         //private List<Department> dep_list;
         List<Department> dep_list = new List<Department>();
+        private Department _selectedDep;
+       
         List<Employee> emp_list = new List<Employee>();
+        private Employee _selectedEmp;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -55,9 +59,16 @@ namespace Employee_Department
 
         private void DepComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (EmpComboBox.SelectedItem == null) return;
+            if (DepComboBox.SelectedItem == null) return;
             var index = DepComboBox.SelectedIndex;
             _selectedDep = dep_list[index];
+        }
+
+        private void EmpComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (EmpComboBox.SelectedItem == null) return;
+            var index = EmpComboBox.SelectedIndex;
+            _selectedEmp = emp_list[index];
         }
     }
 }
