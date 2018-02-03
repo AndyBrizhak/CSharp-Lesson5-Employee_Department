@@ -20,16 +20,19 @@ namespace Employee_Department
     /// </summary>
     public partial class MainWindow : Window
     {
-        //private Department _selectedDep;
-
+        private Department _selectedDep;
+        //private List<Department> dep_list;
+        List<Department> dep_list = new List<Department>();
+        List<Employee> emp_list = new List<Employee>();
         public MainWindow()
         {
             InitializeComponent();
-            List<Department> dep_list = new List<Department>();
+            //FillComboBox ();
+            
             dep_list.Add(new Department() { Name = "Laundry" });
             dep_list.Add(new Department() { Name = "Receiving room" });
             dep_list.Add(new Department() { Name = "Morgue" });
-            //Department.ItemsSource = dep_list;
+            //DepComboBox.ItemsSource = dep_list;
             DepComboBox.Items.Clear();
             foreach (var item in dep_list)
             {
@@ -37,23 +40,24 @@ namespace Employee_Department
             }
 
 
-            List<Employee> emp_list = new List<Employee>();
+            
             emp_list.Add(new Employee("Lozhkin", dep_list[0]));
             emp_list.Add(new Employee("Pupkin", dep_list[1]));
             emp_list.Add(new Employee("Ivanov", dep_list[2]));
-            //Employee.ItemsSource = emp_list;++
+            //EmpComboBox.ItemsSource = emp_list;
             EmpComboBox.Items.Clear();
             foreach (var item in emp_list)
             {
                 EmpComboBox.Items.Add(item);
             }
+                       
         }
 
-        //private void Department_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-        //    //if (Department.SelectedItem == null) return;
-        //    //var index = Department.SelectedIndex;
-        //    //_selectedDep = Department.SelectedItem;
-        //}
+        private void DepComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (EmpComboBox.SelectedItem == null) return;
+            var index = DepComboBox.SelectedIndex;
+            _selectedDep = dep_list[index];
+        }
     }
 }
