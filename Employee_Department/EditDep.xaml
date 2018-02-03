@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Employee_Department"
         mc:Ignorable="d"
         Title="EditDep" Height="300" Width="300">
-    <WrapPanel>
-        
+    <WrapPanel Margin="0,0,2,0">
+        <TextBox x:Name="NameDepTextBox" Height="23" TextWrapping="Wrap" Width="290"/>
+        <ComboBox Width="290"/>
+
     </WrapPanel>
 </Window>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Employee_Department
 {
-    class Employee
+    public class Employee
     {
         private string _emp_name { get; set; }
         private Department _emp_dep { get; set; }

@@ -23,20 +23,18 @@ namespace Employee_Department
         
         //private List<Department> dep_list;
         List<Department> dep_list = new List<Department>();
-        private Department _selectedDep;
+        Department _selectedDep;
        
         List<Employee> emp_list = new List<Employee>();
         private Employee _selectedEmp;
+
 
         public MainWindow()
         {
             InitializeComponent();
             //FillComboBox ();
             
-            dep_list.Add(new Department() { Name = "Laundry" });
-            dep_list.Add(new Department() { Name = "Receiving room" });
-            dep_list.Add(new Department() { Name = "Morgue" });
-            //DepComboBox.ItemsSource = dep_list;
+            
             DepComboBox.Items.Clear();
             foreach (var item in dep_list)
             {
@@ -54,7 +52,9 @@ namespace Employee_Department
             {
                 EmpComboBox.Items.Add(item);
             }
-                       
+
+            EditDep.
+
         }
 
         private void DepComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -62,6 +62,7 @@ namespace Employee_Department
             if (DepComboBox.SelectedItem == null) return;
             var index = DepComboBox.SelectedIndex;
             _selectedDep = dep_list[index];
+            EditDep.NameDepTextBox.Visibility = Visibility.Visible;
         }
 
         private void EmpComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
