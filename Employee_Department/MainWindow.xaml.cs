@@ -20,10 +20,8 @@ namespace Employee_Department
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-        //private List<Department> dep_list;
         List<Department> dep_list = new List<Department>();
-        Department _selectedDep;
+        private Department _selectedDep;
        
         List<Employee> emp_list = new List<Employee>();
         private Employee _selectedEmp;
@@ -32,24 +30,19 @@ namespace Employee_Department
         public MainWindow()
         {
             InitializeComponent();
-            //FillComboBox ();
-
-            dep_list.Add(new Department() { Name = "Laundry" });       //+++
+          
+            dep_list.Add(new Department() { Name = "Laundry" });       
             dep_list.Add(new Department() { Name = "Receiving room" });
             dep_list.Add(new Department() { Name = "Morgue" });
-
             DepComboBox.Items.Clear();
             foreach (var item in dep_list)
             {
                 DepComboBox.Items.Add(item);
             }
-
-
-            
+                                
             emp_list.Add(new Employee("Lozhkin", dep_list[0]));
             emp_list.Add(new Employee("Pupkin", dep_list[1]));
             emp_list.Add(new Employee("Ivanov", dep_list[2]));
-            //EmpComboBox.ItemsSource = emp_list;
             EmpComboBox.Items.Clear();
             foreach (var item in emp_list)
             {

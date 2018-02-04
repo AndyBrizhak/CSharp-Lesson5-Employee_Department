@@ -21,8 +21,8 @@ namespace Employee_Department
 
         public override string ToString()
         {
-            return $"Emp { this.Name} ";
-            
+            //return $"Emp { this.Name} ";
+            return $"{Name}\t{Dep}";
         }
     }
 }

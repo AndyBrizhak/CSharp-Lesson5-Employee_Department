@@ -22,7 +22,7 @@ namespace Employee_Department
 
         public override string ToString()
         {
-            return $"Department {this.Name}";
+            return $"Dep {this.Name}";
         }
     }
 }
