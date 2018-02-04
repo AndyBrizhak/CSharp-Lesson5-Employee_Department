@@ -56,6 +56,9 @@ namespace Employee_Department
             if (DepComboBox.SelectedItem == null) return;
             var index = DepComboBox.SelectedIndex;
             _selectedDep = dep_list[index];
+            EditDep _editDepWindow = new EditDep(_selectedDep);
+            _editDepWindow.Owner = this;
+            _editDepWindow.ShowDialog();
         }
 
         private void EmpComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

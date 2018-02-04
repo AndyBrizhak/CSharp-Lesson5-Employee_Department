@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace Employee_Department
 {
     public class Employee
     {
+        //ObservableCollection<Employee> items = new ObservableCollection<Employee>();
         private string _emp_name { get; set; }
         private Department _emp_dep { get; set; }
 
@@ -21,7 +23,7 @@ namespace Employee_Department
 
         public override string ToString()
         {
-            //return $"Emp { this.Name} ";
+           
             return $"{Name}\t{Dep}";
         }
     }
