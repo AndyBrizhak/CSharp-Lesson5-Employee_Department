@@ -6,9 +6,28 @@
         xmlns:local="clr-namespace:Employee_Department"
         mc:Ignorable="d"
         Title="EditDep" Height="300" Width="300">
-    <WrapPanel Margin="0,0,2,0">
+    <!--<WrapPanel Margin="0,0,2,0">
         <TextBox x:Name="NameDepTextBox" Height="23" TextWrapping="Wrap" Width="290"/>
-        <ComboBox Width="290"/>
+        <ComboBox x:Name="EditDepCombobox" Width="290" IsDropDownOpen="True" IsSynchronizedWithCurrentItem="True" IsReadOnly="True"/>
+        --><!--<ComboBoxItem>Элемент #1</ComboBoxItem>
+        <ComboBoxItem>Элемент #2</ComboBoxItem>
+        <ComboBoxItem>Элемент #3</ComboBoxItem>-->
+        <!--</ComboBox>--><!--
+    </WrapPanel>-->
+    <Grid Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="DepartsComboBox" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="199" IsEnabled="True" Height="22" DropDownOpened="DepartsComboBox_DropDownOpened"/>
+        <Label Content="Select department" HorizontalAlignment="Left" Margin="49,10,0,0" VerticalAlignment="Top" Height="26" Width="138"/>
+        <Button x:Name="ChangeNameButton" Content="Change name of Department" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top" Width="195" Click="ChangeNameButton_Click" Height="22"/>
+        <TextBox x:Name="NewDepNameTextBox" HorizontalAlignment="Left" Height="23" Margin="10,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"/>
+        <Label Content="Input New Department" HorizontalAlignment="Left" Margin="14,121,0,0" VerticalAlignment="Top" Height="26" Width="195"/>
+        <Button x:Name="CreateNewDep" Content="Создать новый департамент" HorizontalAlignment="Left" Margin="10,273,0,0" VerticalAlignment="Top" Width="195" Height="22" Click="CreateNewDep_Click_1"/>
+        <Button x:Name="Exit" Content="Выход" HorizontalAlignment="Left" Margin="73,313,0,0" VerticalAlignment="Top" Width="75" Click="Exit_Click"/>
 
-    </WrapPanel>
+    </Grid>
 </Window>

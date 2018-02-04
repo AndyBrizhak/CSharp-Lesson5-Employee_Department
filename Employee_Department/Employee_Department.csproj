@@ -58,6 +58,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="EditEmp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +73,9 @@
     <Compile Include="Department.cs" />
     <Compile Include="EditDep.xaml.cs">
       <DependentUpon>EditDep.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditEmp.xaml.cs">
+      <DependentUpon>EditEmp.xaml</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="MainWindow.xaml.cs">

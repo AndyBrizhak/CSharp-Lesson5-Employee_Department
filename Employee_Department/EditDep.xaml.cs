@@ -12,8 +12,17 @@ namespace Employee_Department
         public EditDep(Department _selectedDep)
         {
             InitializeComponent();
-            NameDepTextBox.Text = _selectedDep.Name;
+            //NameDepTextBox.Text = _selectedDep.Name;
+            UpdateInfo();
 
         }
+
+        public void UpdateInfo()
+        {
+            DepartsComboBox.Items.Clear();
+            foreach (var ob in MainWindow.dep_list) DepartsComboBox.Items.Add(ob.Name);
+        }
+
+
     }
 }

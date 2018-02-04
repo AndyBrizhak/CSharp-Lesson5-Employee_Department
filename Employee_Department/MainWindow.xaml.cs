@@ -20,7 +20,8 @@ namespace Employee_Department
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Department> dep_list = new List<Department>();
+        internal static List<Department> dep_list { get; set; }
+        
         private Department _selectedDep;
        
         List<Employee> emp_list = new List<Employee>();
@@ -30,7 +31,7 @@ namespace Employee_Department
         public MainWindow()
         {
             InitializeComponent();
-          
+            List<Department> dep_list = new List<Department>();
             dep_list.Add(new Department() { Name = "Laundry" });       
             dep_list.Add(new Department() { Name = "Receiving room" });
             dep_list.Add(new Department() { Name = "Morgue" });
@@ -66,6 +67,9 @@ namespace Employee_Department
             if (EmpComboBox.SelectedItem == null) return;
             var index = EmpComboBox.SelectedIndex;
             _selectedEmp = emp_list[index];
+            EditEmp _editEmpWindow = new EditEmp(_selectedEmp);
+            _editEmpWindow.Owner = this;
+            _editEmpWindow.ShowDialog();
         }
     }
 }
