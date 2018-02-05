@@ -62,6 +62,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CreateEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CreateNewDep.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +91,9 @@
     </Compile>
     <Compile Include="ChangeNameEmp.xaml.cs">
       <DependentUpon>ChangeNameEmp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateEmployee.xaml.cs">
+      <DependentUpon>CreateEmployee.xaml</DependentUpon>
     </Compile>
     <Compile Include="CreateNewDep.xaml.cs">
       <DependentUpon>CreateNewDep.xaml</DependentUpon>
