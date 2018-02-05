@@ -39,7 +39,9 @@ namespace Employee_Department
 
         private void ChangeDepEmp_Click(object sender, RoutedEventArgs e)
         {
-
+            ChangeDepEmp changeDepEmp = new ChangeDepEmp();
+            changeDepEmp.Owner = this;
+            changeDepEmp.ShowDialog();
         }
 
         private void ChangeNameEmp_Click(object sender, RoutedEventArgs e)
