@@ -19,10 +19,37 @@ namespace Employee_Department
     /// </summary>
     public partial class EditEmp : Window
     {
-        public EditEmp(Employee _selectedEmp)
+        public EditEmp()
         {
             InitializeComponent();
-            NameEmpTextBox.Text = _selectedEmp.Name;
+            Update();
+            //NameEmpTextBox.Text = /*_selectedEmp.Name;*/
+        }
+
+        public void Update()
+        {
+            //NamecomboBox.Items.Clear();
+            //foreach (var ob in MainWindow.emp_list) NamecomboBox.Items.Add(ob.Name);
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void ChangeDepEmp_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChangeNameEmp_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddNewEmp_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

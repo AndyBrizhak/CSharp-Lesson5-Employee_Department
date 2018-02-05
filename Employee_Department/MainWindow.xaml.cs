@@ -87,9 +87,6 @@ namespace Employee_Department
         private void DepComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (DepComboBox.SelectedItem == null) return;
-            var index = DepComboBox.SelectedIndex;
-            //_selectedDep = dep_list[index];
-            //EditDep _editDepWindow = new EditDep(_selectedDep);
             EditDep _editDepWindow = new EditDep();
             _editDepWindow.Owner = this;
             _editDepWindow.ShowDialog();
@@ -97,12 +94,10 @@ namespace Employee_Department
 
         private void EmpComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //if (EmpComboBox.SelectedItem == null) return;
-            //var index = EmpComboBox.SelectedIndex;
-            //_selectedEmp = emp_list[index];
-            //EditEmp _editEmpWindow = new EditEmp(_selectedEmp);
-            //_editEmpWindow.Owner = this;
-            //_editEmpWindow.ShowDialog();
+            if (EmpComboBox.SelectedItem == null) return;
+            EditEmp editEmp = new EditEmp();
+            editEmp.Owner = this;
+            editEmp.ShowDialog();
         }
     }
 }
