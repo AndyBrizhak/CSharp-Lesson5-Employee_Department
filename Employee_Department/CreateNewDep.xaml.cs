@@ -23,5 +23,21 @@ namespace Employee_Department
         {
             InitializeComponent();
         }
+
+        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (NameBox.Text != "") MainWindow.dep_list.Add(new Department(NameBox.Text)); else MessageBox.Show("не указано имя");
+            Close();
+        }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+           
+        }
     }
 }

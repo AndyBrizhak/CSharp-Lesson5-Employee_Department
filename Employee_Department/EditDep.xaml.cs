@@ -33,7 +33,9 @@ namespace Employee_Department
 
         private void CreateNewDep_Click(object sender, RoutedEventArgs e)
         {
-
+            CreateNewDep createNewDep = new CreateNewDep();
+            createNewDep.Owner = this;
+            createNewDep.ShowDialog();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
