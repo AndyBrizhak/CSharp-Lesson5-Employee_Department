@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="ChangeNameEmp" Height="300" Width="300">
     <Grid>
-        <ComboBox x:Name="NameEmpConbobox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
+        <ComboBox x:Name="NameEmpComboBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="272" IsSynchronizedWithCurrentItem="True"/>
         <Label Content="Input new name of Employee" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.242,0.285" Width="272"/>
         <TextBox x:Name="NewNameTextBox" HorizontalAlignment="Left" Height="23" Margin="10,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272"/>
-        <Label x:Name="ConfirmLabel" Content="Confirm" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="81"/>
-        <Label x:Name="CancelLabel" Content="Cancel" HorizontalAlignment="Left" Margin="104,96,0,0" VerticalAlignment="Top" Width="76"/>
-        <Label x:Name="ExitLabel" Content="Exit" HorizontalAlignment="Left" Margin="208,96,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button x:Name="ConfirmLabel" Content="Confirm" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="75" Click="ConfirmLabel_Click"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="110,96,0,0" VerticalAlignment="Top" Width="75" Click="CancelButton_Click"/>
+        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="207,96,0,0" VerticalAlignment="Top" Width="75" Click="ExitButton_Click"/>
 
     </Grid>
 </Window>

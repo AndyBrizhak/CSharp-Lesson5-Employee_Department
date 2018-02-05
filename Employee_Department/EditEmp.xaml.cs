@@ -44,7 +44,9 @@ namespace Employee_Department
 
         private void ChangeNameEmp_Click(object sender, RoutedEventArgs e)
         {
-
+            ChangeNameEmp changeNameEmp = new ChangeNameEmp();
+            changeNameEmp.Owner = this;
+            changeNameEmp.ShowDialog();
         }
 
         private void AddNewEmp_Click(object sender, RoutedEventArgs e)
