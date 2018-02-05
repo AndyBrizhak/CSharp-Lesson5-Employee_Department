@@ -1,0 +1,16 @@
+﻿<Window x:Class="Employee_Department.CreateNewDep"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Employee_Department"
+        mc:Ignorable="d"
+        Title="CreateNewDep" Height="150" Width="300">
+    <Grid>
+        <Label Content="Input new name Department" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
+        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272"/>
+        <Button x:Name="ConfirmButton" Content="Create" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="113,64,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

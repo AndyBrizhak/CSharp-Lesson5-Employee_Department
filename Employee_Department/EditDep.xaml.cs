@@ -26,6 +26,19 @@ namespace Employee_Department
             foreach (var ob in MainWindow.dep_list) EditDepCombobox.Items.Add(ob.Name);
         }
 
+        private void ChangeNameButton_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
+
+        private void CreateNewDep_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

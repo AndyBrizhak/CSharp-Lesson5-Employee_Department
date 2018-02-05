@@ -5,13 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Employee_Department"
         mc:Ignorable="d"
-        Title="EditDep" Height="407.5" Width="300">
+        Title="EditDep" Height="150" Width="135">
     <WrapPanel Margin="0,0,2,0">
         <!--<TextBox x:Name="NameDepTextBox" Height="23" TextWrapping="Wrap" Width="290"/>-->
         <ComboBox x:Name="EditDepCombobox" Width="290" IsDropDownOpen="True" IsSynchronizedWithCurrentItem="True" IsReadOnly="True"/>
-        <ComboBoxItem>Элемент #1</ComboBoxItem>
-        <ComboBoxItem>Элемент #2</ComboBoxItem>
-        <ComboBoxItem>Элемент #3</ComboBoxItem>
+        <ComboBoxItem>
+            <Button x:Name="ChangeNameButton" Content="Change name of Department" Width="75" Click="ChangeNameButton_Click"/>
+        </ComboBoxItem>
+        <ComboBoxItem>
+            <Button x:Name="CreateNewDep" Content="Create New Dep" Width="75" Click="CreateNewDep_Click"/>
+        </ComboBoxItem>
+        <ComboBoxItem>
+            <Button x:Name="Exit" Content="Exit" Width="75" Click="Exit_Click"/>
+        </ComboBoxItem>
         <!--</ComboBox>-->
     </WrapPanel>
     <!--<Grid Margin="0,0,2,0">
