@@ -28,7 +28,9 @@ namespace Employee_Department
 
         private void ChangeNameButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ChangeName changeName = new ChangeName();
+            changeName.Owner = this;
+            changeName.ShowDialog();
         }
 
         private void CreateNewDep_Click(object sender, RoutedEventArgs e)

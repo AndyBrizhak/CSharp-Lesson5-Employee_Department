@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Employee_Department"
         mc:Ignorable="d"
-        Title="EditDep" Height="150" Width="135">
+        Title="EditDep" Height="150
+        " Width="135">
     <WrapPanel Margin="0,0,2,0">
         <!--<TextBox x:Name="NameDepTextBox" Height="23" TextWrapping="Wrap" Width="290"/>-->
         <ComboBox x:Name="EditDepCombobox" Width="290" IsDropDownOpen="True" IsSynchronizedWithCurrentItem="True" IsReadOnly="True"/>
