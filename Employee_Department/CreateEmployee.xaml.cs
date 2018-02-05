@@ -35,7 +35,9 @@ namespace Employee_Department
         {
             if (NewNameEmpTextBox.Text != ""  && DepComboBox.SelectedIndex != -1)
             {
-                //MainWindow.emp_list.ElementAt(DepComboBox.SelectedIndex).Add Employee(new Employee(NewNameEmpTextBox.Text, MainWindow.dep_list.ElementAt(DepComboBox.SelectedIndex).Name));
+                        
+                MainWindow.emp_list.Add(new Employee(NewNameEmpTextBox.Text, MainWindow.dep_list.ElementAt(DepComboBox.SelectedIndex)));
+                Close();
             }
             else MessageBox.Show("Invalid Data");
         }

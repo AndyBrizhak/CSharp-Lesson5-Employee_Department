@@ -22,15 +22,15 @@ namespace Employee_Department
         public EditEmp()
         {
             InitializeComponent();
-            Update();
-            //NameEmpTextBox.Text = /*_selectedEmp.Name;*/
+            //Update();
+            
         }
 
-        public void Update()
-        {
-            //NamecomboBox.Items.Clear();
-            //foreach (var ob in MainWindow.emp_list) NamecomboBox.Items.Add(ob.Name);
-        }
+        //public void Update()
+        //{
+        //    //NamecomboBox.Items.Clear();
+        //    //foreach (var ob in MainWindow.emp_list) NamecomboBox.Items.Add(ob.Name);
+        //}
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
@@ -51,7 +51,9 @@ namespace Employee_Department
 
         private void AddNewEmp_Click(object sender, RoutedEventArgs e)
         {
-
+            CreateEmployee createEmp = new CreateEmployee();
+            createEmp.Owner = this;
+            createEmp.ShowDialog();
         }
     }
 }
