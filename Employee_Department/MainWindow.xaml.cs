@@ -58,7 +58,7 @@ namespace Employee_Department
             dep_list.Add(new Department("Morgue"));
         }
 
-        public void Update()
+        public void Update()   //
         {
             DepComboBox.Items.Clear();
             foreach (var ob in dep_list) DepComboBox.Items.Add(ob.Name);
