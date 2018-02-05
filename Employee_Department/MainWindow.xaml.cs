@@ -34,22 +34,7 @@ namespace Employee_Department
             CreateDepartmens();
             CreateEmployees();
             Update();
-
-            //DepComboBox.Items.Clear();
-            //foreach (var item in dep_list)
-            //{
-            //    DepComboBox.Items.Add(item);
-            //}
-
-            //emp_list.Add(new Employee("Lozhkin", dep_list[0]));
-            //emp_list.Add(new Employee("Pupkin", dep_list[1]));
-            //emp_list.Add(new Employee("Ivanov", dep_list[2]));
-            //EmpComboBox.Items.Clear();
-            //foreach (var item in emp_list)
-            //{
-            //    EmpComboBox.Items.Add(item);
-            //}
-                       
+                            
         }
 
         public void CreateEmployees()
@@ -71,9 +56,6 @@ namespace Employee_Department
             dep_list.Add(new Department("Laundry"));
             dep_list.Add(new Department("Receiving room"));
             dep_list.Add(new Department("Morgue"));
-           
-
-
         }
 
         public void Update()
