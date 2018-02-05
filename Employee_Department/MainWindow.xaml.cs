@@ -21,17 +21,18 @@ namespace Employee_Department
     public partial class MainWindow : Window
     {
         internal static List<Department> dep_list { get; set; }
+        internal static List<Employee> emp_list { get; set; }
+        
 
-        //private Department _selectedDep;
 
-        List<Employee> emp_list = new List<Employee>();
-        private Employee _selectedEmp;
+        
 
 
         public MainWindow()
         {
             InitializeComponent();
             CreateDepartmens();
+            CreateEmployees();
             Update();
 
             //DepComboBox.Items.Clear();
@@ -40,6 +41,20 @@ namespace Employee_Department
             //    DepComboBox.Items.Add(item);
             //}
 
+            //emp_list.Add(new Employee("Lozhkin", dep_list[0]));
+            //emp_list.Add(new Employee("Pupkin", dep_list[1]));
+            //emp_list.Add(new Employee("Ivanov", dep_list[2]));
+            //EmpComboBox.Items.Clear();
+            //foreach (var item in emp_list)
+            //{
+            //    EmpComboBox.Items.Add(item);
+            //}
+                       
+        }
+
+        public void CreateEmployees()
+        {
+            emp_list = new List<Employee>();
             emp_list.Add(new Employee("Lozhkin", dep_list[0]));
             emp_list.Add(new Employee("Pupkin", dep_list[1]));
             emp_list.Add(new Employee("Ivanov", dep_list[2]));
@@ -48,18 +63,15 @@ namespace Employee_Department
             {
                 EmpComboBox.Items.Add(item);
             }
-                       
         }
 
         public void CreateDepartmens()
         {
-            dep_list = new List<Department>()/* { d1, d2, d3 }*/;
+            dep_list = new List<Department>();
             dep_list.Add(new Department("Laundry"));
             dep_list.Add(new Department("Receiving room"));
             dep_list.Add(new Department("Morgue"));
-            //Department d1 = new Department("Laundry");
-            //Department d2 = new Department("Receiving room");
-            //Department d3 = new Department("Morgue");
+           
 
 
         }
@@ -68,6 +80,8 @@ namespace Employee_Department
         {
             DepComboBox.Items.Clear();
             foreach (var ob in dep_list) DepComboBox.Items.Add(ob.Name);
+            EmpComboBox.Items.Clear();
+            foreach (var ob in emp_list) EmpComboBox.Items.Add(ob.Name);
         }
 
         private void DepComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -83,12 +97,12 @@ namespace Employee_Department
 
         private void EmpComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (EmpComboBox.SelectedItem == null) return;
-            var index = EmpComboBox.SelectedIndex;
-            _selectedEmp = emp_list[index];
-            EditEmp _editEmpWindow = new EditEmp(_selectedEmp);
-            _editEmpWindow.Owner = this;
-            _editEmpWindow.ShowDialog();
+            //if (EmpComboBox.SelectedItem == null) return;
+            //var index = EmpComboBox.SelectedIndex;
+            //_selectedEmp = emp_list[index];
+            //EditEmp _editEmpWindow = new EditEmp(_selectedEmp);
+            //_editEmpWindow.Owner = this;
+            //_editEmpWindow.ShowDialog();
         }
     }
 }
