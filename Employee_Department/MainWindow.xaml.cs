@@ -54,7 +54,7 @@ namespace Employee_Department
         {
             dep_list = new List<Department>();
             dep_list.Add(new Department("Laundry"));
-            dep_list.Add(new Department("Receiving room"));
+            dep_list.Add(new Department("Receiving room"));//
             dep_list.Add(new Department("Morgue"));
         }
 

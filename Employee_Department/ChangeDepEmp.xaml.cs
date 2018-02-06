@@ -19,6 +19,7 @@ namespace Employee_Department
     /// </summary>
     public partial class ChangeDepEmp : Window
     {
+        //internal ChangeDepEmp(ObservableCollection<Department> dep_list)
         public ChangeDepEmp()
         {
             InitializeComponent();
