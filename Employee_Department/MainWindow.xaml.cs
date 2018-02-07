@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace Employee_Department
 {
@@ -20,12 +22,10 @@ namespace Employee_Department
     /// </summary>
     public partial class MainWindow : Window
     {
-        internal static List<Department> dep_list { get; set; }
+        //internal static List<Department> dep_list { get; set; }
+        internal static ObservableCollection<Department> dep_list { get; set; }   //add new
         internal static List<Employee> emp_list { get; set; }
-        
-
-
-        
+   
 
 
         public MainWindow()
@@ -52,10 +52,12 @@ namespace Employee_Department
 
         public void CreateDepartmens()
         {
-            dep_list = new List<Department>();
+            dep_list = new ObservableCollection<Department>();
             dep_list.Add(new Department("Laundry"));
             dep_list.Add(new Department("Receiving room"));//
             dep_list.Add(new Department("Morgue"));
+            DepComboBox.Items.Clear();
+            foreach (var ob in dep_list) DepComboBox.Items.Add(ob.Name);
         }
 
         public void Update()   //+++
