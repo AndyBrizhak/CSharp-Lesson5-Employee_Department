@@ -24,8 +24,8 @@ namespace Employee_Department
     {
         //internal static List<Department> dep_list { get; set; }
         internal static ObservableCollection<Department> dep_list { get; set; }   //add new
-        internal static List<Employee> emp_list { get; set; }
-   
+        //internal static List<Employee> emp_list { get; set; }
+        internal static ObservableCollection<Employee> emp_list { get; set; }        //add new
 
 
         public MainWindow()
@@ -39,7 +39,8 @@ namespace Employee_Department
 
         public void CreateEmployees()
         {
-            emp_list = new List<Employee>();
+            //emp_list = new List<Employee>();
+            emp_list = new ObservableCollection<Employee>();              //add new
             emp_list.Add(new Employee("Lozhkin", dep_list[0]));
             emp_list.Add(new Employee("Pupkin", dep_list[1]));
             emp_list.Add(new Employee("Ivanov", dep_list[2]));

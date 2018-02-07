@@ -4,22 +4,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using System.Windows;
+using System.ComponentModel;
 
-namespace Employee_Department
+namespace Employee_Department 
 {
-    public class Employee
+    public class Employee : INotifyPropertyChanged
     {
-        //ObservableCollection<Employee> items = new ObservableCollection<Employee>();
+        
         private string _emp_name { get; set; }
         private Department _emp_dep { get; set; }
 
-        public string Name;
-        public Department Dep;
+    //public string Name;
+    public string Name
+    {
+        get { return this._emp_name; }
+        set
+        {
+            if (this._emp_name != value)
+            {
+                this._emp_name = value;
+                this.NotifyPropertyChanged("Name");
+            }
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+    public void NotifyPropertyChanged(string propName)
+    {
+        if (this.PropertyChanged != null)
+            this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+    }
+
+
+
+    public Department Dep;
         public Employee (string _emp_name, Department _emp_dep )
         {
             Name = _emp_name;
             Dep = _emp_dep;
         }
+
+
 
         public override string ToString()
         {
