@@ -5,15 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data.SqlClient;
+using System.Configuration;
+
 
 namespace Employee_Department
 {
@@ -31,6 +27,22 @@ namespace Employee_Department
         public MainWindow()
         {
             InitializeComponent();
+            var connectionString = ConfigurationManager.ConnectionStrings["DefaultStr"].ConnectionString;
+                /*@"Data Source=(LocalDb)\MSSQLLocalDB;*/
+                                                 //Initial Catalog=Employee;
+                                                 //Integrated security = True;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+
+                Console.WriteLine(connection.State);
+                //connection.Close();
+            }
+
+
+
+
             CreateDepartmens();
             CreateEmployees();
             Update();

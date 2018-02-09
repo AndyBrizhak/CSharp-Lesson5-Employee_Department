@@ -7,20 +7,11 @@
         mc:Ignorable="d"
         Title="EditEmp" Height="300" Width="300">
     <WrapPanel Margin="0,0,2,0">
-        <!--<ComboBox x:Name = "NamecomboBox" HorizontalAlignment = "Center" VerticalAlignment = "Center" Width = "272" Margin="10,10,10,237" IsSynchronizedWithCurrentItem="True" Height="131">
-            <ComboBoxItem>-->
-                <Button x:Name="AddNewEmp" Content="Input new Employee" Width="260" Click="AddNewEmp_Click"/>
-            <!--</ComboBoxItem>
-            <ComboBoxItem>-->
-                <Button x:Name="ChangeNameEmp" Content="Change Name of Employee" Width="259" Click="ChangeNameEmp_Click"/>
-            <!--</ComboBoxItem>
-            <ComboBoxItem>-->
-                <Button x:Name="ChangeDepEmp" Content="Change Department of Employee" Width="257" Click="ChangeDepEmp_Click"/>
-            <!--</ComboBoxItem>
-            <ComboBoxItem>-->
-                <Button x:Name="ExitButton" Content="Exit" Width="257" Click="ExitButton_Click"/>
-            <!--</ComboBoxItem>
-        </ComboBox>-->
-
+        <Button x:Name="AddNewEmp" Content="Input new Employee" Width="260" Click="AddNewEmp_Click"/>
+        <Button x:Name="ChangeNameEmp" Content="Change Name of Employee" Width="259" Click="ChangeNameEmp_Click"/>
+        <Button x:Name="ChangeDepEmp" Content="Change Department of Employee" Width="257" Click="ChangeDepEmp_Click"/>
+        <Button x:Name="ExitButton" Content="Exit" Width="257" Click="ExitButton_Click"/>
+       
+            
     </WrapPanel>
 </Window>
