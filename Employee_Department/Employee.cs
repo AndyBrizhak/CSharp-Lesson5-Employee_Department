@@ -7,6 +7,8 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using System.ComponentModel;
 
+//ДЗ к занятию 5 по курсу C# продвинутый Брижак Андрей
+
 namespace Employee_Department 
 {
     public class Employee : INotifyPropertyChanged

@@ -7,17 +7,16 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using System.ComponentModel;
 
+//ДЗ к занятию 5 по курсу C# продвинутый Брижак Андрей
 
 namespace Employee_Department
 {
    public class Department : INotifyPropertyChanged
     {
-        //private string _name { get; set; }
+        
         private string _name;                       //add new
 
-        //public Department(string _name)
-        //{
-        //}
+        
 
         //public string Name;
         public string Name                                  //add new
