@@ -28,11 +28,11 @@ namespace Employee_Department
         {
             InitializeComponent();
             
-            var connectionString = new SqlConnectionStringBuilder
-            {
-                DataSource = @"(LocalDb)\MSSQLLocalDB",
-                InitialCatalog = "Employee"
-            }.ConnectionString;
+            //var connectionString = new SqlConnectionStringBuilder
+            //{
+            //    DataSource = @"(LocalDb)\MSSQLLocalDB",
+            //    InitialCatalog = "Employee"
+            //}.ConnectionString;
 
             Department dep1 = new Department
             {
@@ -48,23 +48,23 @@ namespace Employee_Department
                 Name = "Morgue"
             };
 
-            var sqlExp1 = $@"INSERT INTO Dep(Name) VALUES ('{dep1.Name}')";//добавляем строки и наименования
-            var sqlExp2 = $@"INSERT INTO Dep(Name) VALUES ('{dep2.Name}')";
-            var sqlExp3 = $@"INSERT INTO Dep(Name) VALUES ('{dep3.Name}')";
-            var sqlExpDel = $@"DELETE FROM Dep WHERE Name = 'Laundry'";    //удаляем строки
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                SqlCommand command1 = new SqlCommand(sqlExp1, connection);
-                var number1 = command1.ExecuteNonQuery();
-                SqlCommand command2 = new SqlCommand(sqlExp2, connection);
-                var number2 = command2.ExecuteNonQuery();
-                SqlCommand command3 = new SqlCommand(sqlExp3, connection);
-                var number3 = command3.ExecuteNonQuery();
-                SqlCommand commandDel = new SqlCommand(sqlExpDel, connection);
-                var number4 = commandDel.ExecuteNonQuery();
-                Console.WriteLine(connection.State);
-            }
+            //var sqlExp1 = $@"INSERT INTO Dep(Name) VALUES ('{dep1.Name}')";//добавляем строки и наименования
+            //var sqlExp2 = $@"INSERT INTO Dep(Name) VALUES ('{dep2.Name}')";
+            //var sqlExp3 = $@"INSERT INTO Dep(Name) VALUES ('{dep3.Name}')";
+            //var sqlExpDel = $@"DELETE FROM Dep WHERE Name = 'Laundry'";    //удаляем строки
+            //using (SqlConnection connection = new SqlConnection(connectionString))
+            //{
+            //    connection.Open();
+            //    SqlCommand command1 = new SqlCommand(sqlExp1, connection);
+            //    var number1 = command1.ExecuteNonQuery();
+            //    SqlCommand command2 = new SqlCommand(sqlExp2, connection);
+            //    var number2 = command2.ExecuteNonQuery();
+            //    SqlCommand command3 = new SqlCommand(sqlExp3, connection);
+            //    var number3 = command3.ExecuteNonQuery();
+            //    SqlCommand commandDel = new SqlCommand(sqlExpDel, connection);
+            //    var number4 = commandDel.ExecuteNonQuery();
+            //    Console.WriteLine(connection.State);
+            //}
 
 
             CreateDepartmens();
